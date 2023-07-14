@@ -19,7 +19,7 @@ export default function Home() {
         <p>Digite o telefone do destinatário</p>
         <input
           type='phone'
-          className='bg-stone-200 rounded-lg p-2 max-sm:w-4/5 w-1/2'
+          className='bg-stone-200 shadow-lg rounded-lg p-2 max-sm:w-4/5 w-1/2'
           onChange={(e) => setPhone(e.target.value)}
           value={phone}
           placeholder='5511999999999'
@@ -42,13 +42,12 @@ export default function Home() {
       </button>
       <div>
         {link ? (
-          <a
-            className='bg-green-800 text-white p-2 rounded-lg flex justify-center items-center'
-            href={link}
-          >
-            <BsWhatsapp className='mr-2' />
-            Clique para enviar
-          </a>
+          <button className='bg-green-800 text-white p-2 rounded-lg hover:scale-125'>
+            <a className='flex justify-center items-center' href={link}>
+              <BsWhatsapp className='mr-2' />
+              Clique para enviar
+            </a>
+          </button>
         ) : (
           ''
         )}
